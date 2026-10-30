@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ALUMNI E-MEET — Bakar-Bakar X Alumni Meet</title>
+  <meta name="description" content="Undangan Bakar-Bakar X Alumni Meet, Minggu 15 November 2026, oleh Asisten Lab Dasar Karawaci.">
+  <meta name="theme-color" content="#FFF0B8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="on-intro">
+
+  <!-- Sprite ikon dekorasi (vektor, tanpa aset eksternal) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.9 7 5 11.1 12 12-7 .9-11.1 5-12 12-.9-7-5-11.1-12-12C7 11.1 11.1 7 12 0z"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1c.8 4.2 5.5 6.6 5.5 12a5.5 5.5 0 0 1-11 0c0-2.3 1.1-3.8 2.3-5 .2 1.8.9 2.8 2 3.3C10.3 8 10.6 4.5 12 1z"/></symbol>
+      <symbol id="i-flower" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="6.5" r="4.6"/><circle cx="17.2" cy="10.3" r="4.6"/><circle cx="15.2" cy="16.4" r="4.6"/><circle cx="8.8" cy="16.4" r="4.6"/><circle cx="6.8" cy="10.3" r="4.6"/></g><circle cx="12" cy="12" r="3.2" fill="#F6C945"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21C3 10 9 3 21 3c0 12-7 18-18 18z"/><path d="M4 20L15 9" stroke="#fff" stroke-opacity=".6" stroke-width="1.3" fill="none"/></symbol>
+      <symbol id="i-skewer" viewBox="0 0 48 24"><path d="M2 20L46 4" stroke="#8B6F47" stroke-width="2" stroke-linecap="round"/><g transform="rotate(-20 24 12)"><rect x="9" y="6.5" width="9" height="11" rx="3" fill="#EE6C57"/><rect x="19.5" y="6.5" width="9" height="11" rx="3" fill="#9DB59A"/><rect x="30" y="6.5" width="9" height="11" rx="3" fill="#F6C945"/></g></symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24"><path d="M2 11.5L22 3l-6 18-4.5-7z" fill="#FFFDF7" stroke="#2E2A24" stroke-width="1.4" stroke-linejoin="round"/><path d="M22 3L11.5 14" stroke="#2E2A24" stroke-width="1.4" fill="none"/></symbol>
+      <symbol id="i-baton" viewBox="0 0 48 12"><rect width="24" height="12" rx="6" fill="#EE6C57"/><rect x="24" width="24" height="12" rx="6" fill="#F6C945"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#stage">Lewati ke konten</a>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div id="bunting" class="bunting" aria-hidden="true"></div>
+
+  <!-- Kontrol musik: konsisten di semua scene -->
+  <button id="musicBtn" class="music-btn" type="button" aria-pressed="false" aria-label="Putar musik">
+    <svg class="ico-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+    <svg class="ico-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg>
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="music-label">Musik</span>
+  </button>
+  <audio id="bgm" src="assets/audio/bgm-alumni-e-meet.mp3" loop preload="none"></audio>
+
+  <main id="stage" class="stage" tabindex="-1">
+
+    <!-- SCENE 1 — Pembuka -->
+    <section class="scene scene-1" data-title="Pembuka" data-deco="sparkle:9,flower:4,flame:3" aria-label="Scene 1 dari 6: Pembuka">
+      <div class="bg"><div class="rays"></div></div>
+      <div class="scene-inner center">
+        <div class="hang" data-p>
+          <span class="string s-l" aria-hidden="true"></span>
+          <span class="string s-r" aria-hidden="true"></span>
+          <figure class="photo cover-photo tape">
+            <span class="frame"><img src="assets/images/00-cover-lab.webp" alt="Foto cover Asisten Lab Dasar Karawaci" data-label="Foto cover lab"></span>
+          </figure>
+          <div class="seal" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <defs><path id="ringPath" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs>
+              <circle cx="60" cy="60" r="58" fill="#EE6C57"/>
+              <circle cx="60" cy="60" r="53" fill="none" stroke="#FFFDF7" stroke-opacity=".7" stroke-dasharray="2 4"/>
+              <g class="seal-ring"><text font-size="10.5" font-weight="800" fill="#FFFDF7" letter-spacing="1"><textPath href="#ringPath" textLength="262" lengthAdjust="spacing">BAKAR-BAKAR • ALUMNI MEET • 2026 • </textPath></text></g>
+              <g transform="translate(40 38) scale(1.7)" color="#FFE08A"><use href="#i-flame" width="24" height="24"/></g>
+            </svg>
+          </div>
+        </div>
+        <p class="eyebrow" data-a>Undangan Reuni</p>
+        <h1 class="title" id="mainTitle" aria-label="ALUMNI E-MEET">ALUMNI E-MEET</h1>
+        <p class="subtitle" data-a>Bakar-Bakar X Alumni Meet</p>
+        <p class="organizer" data-a>Asisten Lab Dasar Karawaci</p>
+        <button id="startBtn" class="btn btn-primary btn-shine" type="button" data-a>Mulai perjalanan</button>
+      </div>
+    </section>
+
+    <!-- SCENE 2 — Awal Bergabung -->
+    <section class="scene scene-2" data-title="Awal Bergabung" data-deco="sparkle:6,flower:3" aria-label="Scene 2 dari 6: Awal Bergabung">
+      <div class="bg">
+        <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+        <svg class="plane" aria-hidden="true"><use href="#i-plane"/></svg>
+      </div>
+      <div class="scene-inner split">
+        <div class="copy">
+          <p class="eyebrow" data-a>Bab 1</p>
+          <h2 data-a>Awal Bergabung</h2>
+          <svg class="squiggle" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8c12-8 22 6 34-1s22-6 34 0 22 6 34-1 22-6 34 0 14 2 18 0" fill="none" stroke="#EE6C57" stroke-width="3" stroke-linecap="round"/></svg>
+          <p class="narr">Semua berawal dari satu langkah kecil ke dalam lab. Masih canggung, masih banyak bertanya, tapi dari situlah cerita kita dimulai.</p>
+          <p class="soft narr">Ingat hari pertama itu?</p>
+        </div>
+        <div class="photos">
+          <figure class="photo polaroid tape-c" style="--r:-3deg" data-p><span class="frame"><img src="assets/images/01-awal-bergabung-01.webp" alt="Foto arsip awal bergabung, bagian 1" data-label="Awal bergabung 1"></span></figure>
+          <figure class="photo polaroid offset" style="--r:2.5deg" data-p><span class="frame"><img src="assets/images/01-awal-bergabung-02.webp" alt="Foto arsip awal bergabung, bagian 2" data-label="Awal bergabung 2"></span></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 3 — Hari-Hari Kebersamaan -->
+    <section class="scene scene-3" data-title="Hari-Hari Kebersamaan" data-deco="sparkle:8,flame:3,flower:3" aria-label="Scene 3 dari 6: Hari-Hari Kebersamaan">
+      <div class="bg"></div>
+      <div class="scene-inner stack">
+        <div class="copy narrow">
+          <p class="eyebrow" data-a>Bab 2</p>
+          <h2 data-a>Hari-Hari Kebersamaan</h2>
+          <svg class="squiggle" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8c12-8 22 6 34-1s22-6 34 0 22 6 34-1 22-6 34 0 14 2 18 0" fill="none" stroke="#4F6B4D" stroke-width="3" stroke-linecap="round"/></svg>
+          <p class="narr">Praktikum yang panjang, tawa di sela-sela revisi, dan kebiasaan kecil yang cuma kita yang paham.</p>
+        </div>
+        <div class="scrapbook">
+          <figure class="photo polaroid sb-a tape" style="--r:-3deg" data-p><span class="frame"><img src="assets/images/02-kebersamaan-01.webp" alt="Foto arsip kebersamaan 1" data-label="Kebersamaan 1"></span><figcaption>masih ingat?</figcaption></figure>
+          <figure class="photo polaroid sb-b tape-c" style="--r:2.5deg" data-p><span class="frame"><img src="assets/images/02-kebersamaan-02.webp" alt="Foto arsip kebersamaan 2" data-label="Kebersamaan 2"></span><figcaption>satu tim</figcaption></figure>
+          <figure class="photo polaroid sb-c tape-s" style="--r:2deg" data-p><span class="frame"><img src="assets/images/02-kebersamaan-03.webp" alt="Foto arsip kebersamaan 3" data-label="Kebersamaan 3"></span><figcaption>kita dulu</figcaption></figure>
+          <figure class="photo polaroid sb-d tape" style="--r:-2.5deg" data-p><span class="frame"><img src="assets/images/02-kebersamaan-04.webp" alt="Foto arsip kebersamaan 4" data-label="Kebersamaan 4"></span><figcaption>tawa bareng</figcaption></figure>
+          <svg class="sticker st-a" aria-hidden="true"><use href="#i-skewer"/></svg>
+          <svg class="sticker st-b" aria-hidden="true"><use href="#i-skewer"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 4 — Serah Terima -->
+    <section class="scene scene-4" data-title="Serah Terima" data-deco="sparkle:6,leaf:6" aria-label="Scene 4 dari 6: Serah Terima">
+      <div class="bg"></div>
+      <div class="scene-inner split reverse">
+        <div class="copy">
+          <p class="eyebrow" data-a>Bab 3</p>
+          <h2 data-a>Serah Terima</h2>
+          <svg class="squiggle" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8c12-8 22 6 34-1s22-6 34 0 22 6 34-1 22-6 34 0 14 2 18 0" fill="none" stroke="#EE6C57" stroke-width="3" stroke-linecap="round"/></svg>
+          <p class="narr">Tiba saatnya tongkat estafet berpindah tangan. Tanggung jawab yang dulu kita pikul kini diteruskan oleh generasi berikutnya.</p>
+          <p class="soft narr">Pergantian generasi, semangat yang sama.</p>
+        </div>
+        <div class="photos relay">
+          <svg class="arc" viewBox="0 0 200 60" aria-hidden="true">
+            <path id="arcPath" d="M16 52 Q100 -22 184 52" fill="none" stroke="#4F6B4D" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"/>
+            <g><g transform="translate(-14 -4)"><use href="#i-baton" width="28" height="8"/></g>
+              <animateMotion dur="3.6s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".5 0 .5 1"><mpath href="#arcPath"/></animateMotion>
+            </g>
+          </svg>
+          <figure class="photo polaroid tape-s" style="--r:2.5deg" data-p><span class="frame"><img src="assets/images/03-serah-terima-01.webp" alt="Foto arsip serah terima, bagian 1" data-label="Serah terima 1"></span></figure>
+          <figure class="photo polaroid offset tape-c" style="--r:-3deg" data-p><span class="frame"><img src="assets/images/03-serah-terima-02.webp" alt="Foto arsip serah terima, bagian 2" data-label="Serah terima 2"></span></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5 — Setelah Lab -->
+    <section class="scene scene-5" data-title="Setelah Lab" data-deco="sparkle:7,flower:3" aria-label="Scene 5 dari 6: Setelah Lab">
+      <div class="bg">
+        <div class="sun"></div>
+        <span class="lantern" style="--x:8%;--t:19s;--d:-2s"></span>
+        <span class="lantern" style="--x:30%;--t:24s;--d:-11s"></span>
+        <span class="lantern" style="--x:62%;--t:21s;--d:-6s"></span>
+        <span class="lantern" style="--x:86%;--t:26s;--d:-15s"></span>
+        <svg class="road" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 190 C80 120 140 190 220 120 S360 90 410 40" fill="none" stroke="#FFFDF7" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+      </div>
+      <div class="scene-inner split">
+        <div class="copy">
+          <p class="eyebrow" data-a>Bab 4</p>
+          <h2 data-a>Setelah Lab</h2>
+          <svg class="squiggle" viewBox="0 0 160 12" aria-hidden="true"><path d="M2 8c12-8 22 6 34-1s22-6 34 0 22 6 34-1 22-6 34 0 14 2 18 0" fill="none" stroke="#C94F3C" stroke-width="3" stroke-linecap="round"/></svg>
+          <p class="narr">Kita melangkah ke arah masing-masing. Kesibukan baru, kota baru, cerita baru. Tapi pertemanan itu tetap ada di tempat yang sama.</p>
+          <p class="soft narr">Sudah waktunya kita duduk bersama lagi.</p>
+        </div>
+        <div class="photos">
+          <figure class="photo polaroid tape" style="--r:-3deg" data-p><span class="frame"><img src="assets/images/04-setelah-lab-01.webp" alt="Foto arsip setelah lab, bagian 1" data-label="Setelah lab 1"></span></figure>
+          <figure class="photo polaroid offset tape-s" style="--r:2.5deg" data-p><span class="frame"><img src="assets/images/04-setelah-lab-02.webp" alt="Foto arsip setelah lab, bagian 2" data-label="Setelah lab 2"></span></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 6 — Ajakan Reuni -->
+    <section class="scene scene-6" data-title="Ajakan Reuni" data-deco="sparkle:10,flower:3" aria-label="Scene 6 dari 6: Ajakan Reuni">
+      <div class="bg"><div class="rays"></div></div>
+      <div class="scene-inner invite">
+        <div class="invite-body">
+          <figure class="photo poster tape" data-p>
+            <button id="posterBtn" class="poster-btn" type="button" aria-label="Perbesar poster">
+              <span class="frame"><img src="assets/poster/poster-alumni-e-meet.webp" alt="Poster resmi ALUMNI E-MEET" data-label="Poster resmi"></span>
+            </button>
+          </figure>
+
+          <div class="inv-title">
+            <p class="eyebrow" data-a>Ajakan Reuni</p>
+            <h2 data-a>ALUMNI E-MEET</h2>
+            <p class="subtitle small" data-a>Bakar-Bakar X Alumni Meet</p>
+            <p class="organizer" data-a>Asisten Lab Dasar Karawaci</p>
+          </div>
+
+          <div id="countdown" class="countdown" role="timer" aria-live="off" aria-label="Hitung mundur menuju acara" data-a>
+            <div class="cd"><b id="cdD">00</b><span>Hari</span></div>
+            <div class="cd"><b id="cdH">00</b><span>Jam</span></div>
+            <div class="cd"><b id="cdM">00</b><span>Menit</span></div>
+            <div class="cd"><b id="cdS">00</b><span>Detik</span></div>
+          </div>
+          <p id="cdDone" class="cd-done" hidden>Hari yang ditunggu tiba. Sampai jumpa!</p>
+
+          <dl class="info" data-a>
+            <div><dt>Tanggal</dt><dd>Minggu, 15 November 2026</dd></div>
+            <div><dt>Waktu</dt><dd>17.00 WIB sampai selesai</dd></div>
+            <div><dt>Lokasi</dt><dd>Perumahan Taman Buah 2, Jl. Jeruk II 26-16, Kutabumi, Kec. Pasar Kemis, Kabupaten Tangerang, Banten</dd></div>
+            <div><dt>Batas RSVP</dt><dd>12 November 2026 (H-3)</dd></div>
+            <!-- TODO sebelum publikasi: verifikasi format nomor kontak ini -->
+            <div><dt>Kontak</dt><dd>0899-1771-72</dd></div>
+          </dl>
+        </div>
+
+        <div class="cta-row" data-a>
+          <button id="rsvpBtn" class="btn btn-primary btn-shine wide" type="button">Konfirmasi Kehadiran</button>
+          <a id="mapsBtn" class="btn btn-secondary" href="https://maps.app.goo.gl/jNQz2fvf2gsF6HgM6?g_st=ic" target="_blank" rel="noopener noreferrer">Buka Google Maps</a>
+          <button id="shareBtn" class="btn btn-ghost" type="button">Bagikan Undangan</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navigasi: jalur perjalanan -->
+  <nav class="nav" aria-label="Navigasi scene">
+    <button id="prevBtn" class="nav-btn" type="button" aria-label="Scene sebelumnya">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div id="track" class="track" style="--p:0">
+      <div class="track-line"><i class="track-fill"></i></div>
+      <ol id="nodes" class="nodes" aria-label="Progres perjalanan"></ol>
+      <svg class="flame-head" aria-hidden="true"><use href="#i-flame"/></svg>
+      <span id="trackLabel" class="track-label" aria-hidden="true"></span>
+    </div>
+    <button id="nextBtn" class="nav-btn" type="button" aria-label="Scene berikutnya">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </nav>
+  <p id="srStatus" class="sr-only" aria-live="polite"></p>
+
+  <!-- Lightbox poster -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="lbClose" class="lb-close" type="button" aria-label="Tutup poster">×</button>
+    <img id="lbImg" alt="Poster resmi ALUMNI E-MEET (diperbesar)">
+  </div>
+
+  <!-- Modal RSVP -->
+  <div id="rsvpModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+      <span class="grab" aria-hidden="true"></span>
+      <button class="modal-close" type="button" data-close aria-label="Tutup">×</button>
+
+      <div id="stateForm">
+        <h3 id="rsvpTitle">Sampai bertemu kembali!</h3>
+        <p class="modal-sub">Bantu kami mempersiapkan pertemuan ini dengan mengisi informasi singkat berikut.</p>
+        <form id="rsvpForm" novalidate>
+          <div class="field">
+            <label for="nama">Nama lengkap</label>
+            <input id="nama" name="nama_lengkap" type="text" autocomplete="name" maxlength="100" placeholder="Tuliskan nama Anda" required aria-describedby="err-nama">
+            <p class="err" id="err-nama" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="tahun">Tahun terakhir bertugas sebagai Asisten Lab</label>
+            <input id="tahun" name="tahun_terakhir_bertugas" type="number" inputmode="numeric" min="1980" max="2026" placeholder="Contoh: 2022" required aria-describedby="err-tahun">
+            <p class="err" id="err-tahun" role="alert"></p>
+          </div>
+          <fieldset class="field" aria-describedby="err-status">
+            <legend>Apakah Anda akan hadir?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="status_kehadiran" value="HADIR"><span class="ctext"><b>Ya, saya akan hadir!</b><small>Sampai jumpa di sana.</small></span></label>
+              <label class="choice"><input type="radio" name="status_kehadiran" value="TIDAK_HADIR"><span class="ctext"><b>Maaf, kali ini saya belum bisa hadir.</b><small>Semoga kita berjumpa di kesempatan lain.</small></span></label>
+            </div>
+            <p class="err" id="err-status" role="alert"></p>
+          </fieldset>
+          <button class="btn btn-primary btn-shine block" type="submit">Kirim konfirmasi</button>
+          <p class="privacy">Data ini hanya digunakan panitia untuk persiapan acara.</p>
+        </form>
+      </div>
+
+      <div id="stateLoading" class="state" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p role="status">Mengirim konfirmasi…</p>
+      </div>
+
+      <div id="stateSuccess" class="state" hidden>
+        <svg class="check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="#9DB59A" stroke-width="3"/><path d="M14 27l8 8 16-17" fill="none" stroke="#4F6B4D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Terima kasih!</h3>
+        <p id="successMsg">Konfirmasimu sudah tersimpan. Sampai jumpa di acaranya.</p>
+        <button class="btn btn-secondary" type="button" data-close>Tutup</button>
+      </div>
+
+      <div id="stateError" class="state" hidden>
+        <div class="state-ico bad" aria-hidden="true">!</div>
+        <h3>Belum berhasil terkirim</h3>
+        <p id="errorMsg" role="alert">Terjadi kendala. Coba lagi.</p>
+        <button id="retryBtn" class="btn btn-primary" type="button">Coba lagi</button>
+        <button class="btn btn-ghost" type="button" data-close>Tutup</button>
+      </div>
+
+      <div id="stateClosed" class="state" hidden>
+        <div class="state-ico muted" aria-hidden="true">⏳</div>
+        <h3>RSVP sudah ditutup</h3>
+        <p>Batas konfirmasi adalah 12 November 2026. Hubungi kontak panitia bila masih ingin hadir.</p>
+        <button class="btn btn-secondary" type="button" data-close>Tutup</button>
+      </div>
+
+      <div id="stateOffline" class="state" hidden>
+        <div class="state-ico muted" aria-hidden="true">⚙</div>
+        <h3>Penyimpanan belum aktif</h3>
+        <p>Backend RSVP belum terhubung, jadi data belum dikirim ke mana pun.</p>
+        <button class="btn btn-secondary" type="button" data-close>Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
