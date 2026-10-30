@@ -374,11 +374,13 @@ h2 { font-size: clamp(1.9rem, 8vw, 3.1rem); }
   flex: none; box-sizing: border-box; display: block;
   width: 22px; height: 22px; min-width: 22px; min-height: 22px; max-width: 22px; max-height: 22px;
   aspect-ratio: 1 / 1; margin: 1px 0 0; padding: 0;
-  border: 2px solid var(--ink-soft); border-radius: 50%; background: #fff;
-  transform: none; rotate: 0deg;
-  transition: border-color .2s, background .2s, box-shadow .2s;
+  border: 2px solid var(--ink-soft); border-radius: 50%;
+  background: #fff no-repeat center / 100% 100%; background-clip: padding-box; background-origin: padding-box;
+  box-shadow: none; transform: none; rotate: 0deg; outline-offset: 3px;
+  transition: border-color .2s;
 }
-.choice input:checked { border-color: var(--coral); background: var(--coral); box-shadow: inset 0 0 0 4px #fff; }
+/* Titik tengah digambar dengan gradien radial: selalu tepat di pusat lingkaran */
+.choice input:checked { border-color: var(--coral); background-image: radial-gradient(circle at 50% 50%, var(--coral) 0 5px, #fff 5.5px); }
 .choice input:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; border-radius: 50%; }
 .choice .ctext { display: block; }
 .choice b { display: block; font-weight: 800; line-height: 1.3; }
