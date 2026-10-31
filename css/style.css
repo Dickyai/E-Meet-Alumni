@@ -367,13 +367,13 @@ h2 { font-size: clamp(1.9rem, 8vw, 3.1rem); }
 .field input:focus { border-color: var(--coral); outline: none; box-shadow: 0 0 0 4px rgba(238,108,87,.18); }
 .field input.invalid { border-color: var(--coral-dark); }
 .choices { display: grid; grid-template-columns: 1fr; gap: 10px; }
-.choice { display: flex !important; align-items: flex-start; justify-content: flex-start; gap: 12px; min-height: 60px; padding: 14px 16px; border: 2px solid var(--line); border-radius: 14px; margin: 0 !important; font-weight: 500 !important; cursor: pointer; background: #fff; text-align: left; transition: transform .15s, border-color .2s, background .2s; }
+.choice { display: flex !important; align-items: center; justify-content: flex-start; gap: 18px; min-height: 64px; padding: 14px 20px 14px 40px; border: 2px solid var(--line); border-radius: 14px; margin: 0 !important; font-weight: 500 !important; cursor: pointer; background: #fff; text-align: justify; transition: transform .15s, border-color .2s, background .2s; }
 /* Radio buatan sendiri: selalu bulat sempurna, tidak peka terhadap rendering bawaan browser mobile */
 .choice input {
   -webkit-appearance: none; appearance: none;
   flex: none; box-sizing: border-box; display: block;
   width: 22px; height: 22px; min-width: 22px; min-height: 22px; max-width: 22px; max-height: 22px;
-  aspect-ratio: 1 / 1; margin: 1px 0 0; padding: 0;
+  aspect-ratio: 1 / 1; margin: 0; padding: 0; align-self: center;
   border: 2px solid var(--ink-soft); border-radius: 50%;
   background: #fff no-repeat center / 100% 100%; background-clip: padding-box; background-origin: padding-box;
   box-shadow: none; transform: none; rotate: 0deg; outline-offset: 3px;
@@ -412,7 +412,8 @@ h2 { font-size: clamp(1.9rem, 8vw, 3.1rem); }
 .copy .soft { text-align-last: left; }
 .copy.narrow .soft { text-align-last: center; }
 .state p { text-align-last: center; }
-.choice small { text-align-last: left; }
+.choice .ctext { flex: 1 1 auto; min-width: 0; text-align: justify; text-align-last: left; }
+.choice small, .choice b { text-align: justify; text-align-last: left; }
 
 /* ---------- Layar lebar ---------- */
 @media (min-width: 820px) {
