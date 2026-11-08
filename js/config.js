@@ -7,7 +7,7 @@ window.EMEET_CONFIG = {
   // Tenggat RSVP: 26 November 2026 pukul 23.59 WIB
   DEADLINE_ISO: '2026-11-26T23:59:59+07:00',
 
-  // Waktu mulai acara (untuk hitung mundur di scene akhir): Minggu 15 November 2026, 17.00 WIB
+  // Waktu mulai acara (untuk hitung mundur di scene akhir): Minggu 29 November 2026, 16.30 WIB
   EVENT_START_ISO: '2026-11-29T16:30:00+07:00',
 
   // Khusus pengujian: isi mis. '2026-11-13T09:00:00+07:00' untuk mensimulasikan RSVP ditutup.
