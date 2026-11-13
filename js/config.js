@@ -1,4 +1,4 @@
-// Konfigurasi ALUMNI E-MEET — isi saat deployment.
+// Konfigurasi TEMU ALUMNI ELITE — isi saat deployment.
 window.EMEET_CONFIG = {
   // Tempel URL Web App Apps Script (berakhiran /exec) di sini.
   // Selama kosong, form RSVP TIDAK akan menyimpan apa pun dan UI tidak menampilkan "sukses".
@@ -7,8 +7,8 @@ window.EMEET_CONFIG = {
   // Tenggat RSVP: 26 November 2026 pukul 23.59 WIB
   DEADLINE_ISO: '2026-11-26T23:59:59+07:00',
 
-  // Waktu mulai acara (untuk hitung mundur di scene akhir): Minggu 29 November 2026, 16.30 WIB
-  EVENT_START_ISO: '2026-11-29T16:30:00+07:00',
+  // Waktu mulai acara (untuk hitung mundur di scene akhir): Minggu 29 November 2026, 16.00 WIB
+  EVENT_START_ISO: '2026-11-29T16:00:00+07:00',
 
   // Khusus pengujian: isi mis. '2026-11-13T09:00:00+07:00' untuk mensimulasikan RSVP ditutup.
   // WAJIB dikosongkan (null) sebelum rilis.
@@ -18,8 +18,8 @@ window.EMEET_CONFIG = {
   YEAR_MAX: 2026,
 
   SHARE: {
-    title: 'ALUMNI E-MEET — Bakar-Bakar X Alumni Meet',
-    text: 'Kamu diundang reuni Asisten Lab Dasar Karawaci, Minggu 29 November 2026, 16.30 WIB. Yuk konfirmasi kehadiran!'
+    title: 'TEMALI — Temu Rasa, Temu Cerita, Temu Kembali',
+    text: 'Kakak diundang reuni Asisten Lab Dasar Karawaci, Minggu 29 November 2026, 16.00 WIB. Yuk konfirmasi kehadiran!'
   },
 
   REQUEST_TIMEOUT_MS: 15000
