@@ -489,8 +489,8 @@
         if (json && json.ok === true) { // sukses HANYA bila backend mengonfirmasi
           var hadir = payload.status_kehadiran === 'HADIR';
           $('#successMsg').textContent = hadir
-            ? 'Kehadiranmu sudah tercatat. Sampai jumpa di Temu Alumni ELITE!'
-            : 'Konfirmasimu sudah tercatat. Terima kasih sudah mengabari.';
+            ? 'Kehadiran kakak sudah tercatat. Sampai jumpa di Temu Alumni ELITE!'
+            : 'Konfirmasi kakak sudah tercatat. Terima kasih sudah mengabari.';
           show('Success'); form.reset(); pending = null;
           burst(window.innerWidth / 2, window.innerHeight * .5, hadir ? 'confetti' : 'spark', hadir ? 110 : 30);
         } else failWith((json && json.message) || 'Server menolak data.');
